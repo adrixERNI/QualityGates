@@ -89,8 +89,8 @@ jobs:
       - name: Upload ZIP artifact
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifact
-          path: build-artifact.zip
+          name: Adrix-Llou
+          path: Adrix-Llou.zip
 
   Adrix-Llou-Dagsa:
     runs-on: ubuntu-latest
