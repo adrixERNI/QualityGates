@@ -1,4 +1,4 @@
-name: Lint, Prettier, Test
+name: Lint, Prettier, Test, Build
 
 on:
   push:
