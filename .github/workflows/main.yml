@@ -12,17 +12,28 @@ jobs:
   # Job for Linting
   
         
-  Adrix-Llou-Dagsa:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Display Name
-        run: echo "Adrix Llou Dagsa"
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: List current directory
-        run: ls -R 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: |
+        
+          npm run build
 
       - name: Create ZIP file
         run: |
+          # Assuming build output is in the dist folder
           zip -r build-artifact.zip ./dist
 
       - name: Upload ZIP artifact
