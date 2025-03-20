@@ -73,7 +73,7 @@ jobs:
 
       - name: Create ZIP file
         run: |
-          zip -r build-artifact.zip ./path/to/your/build/files
+           zip -r build-artifact.zip ./dist
 
       - name: Upload ZIP artifact
         uses: actions/upload-artifact@v4
