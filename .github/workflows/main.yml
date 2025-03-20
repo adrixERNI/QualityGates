@@ -84,7 +84,7 @@ jobs:
 
       - name: Create ZIP file
         run: |
-          zip -r build-artifact.zip ./dist
+          zip -r Adrix-Llou.zip ./dist
 
       - name: Upload ZIP artifact
         uses: actions/upload-artifact@v4
