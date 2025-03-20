@@ -70,3 +70,13 @@ jobs:
     steps:
       - name: Display Name
         run: echo "Adrix Llou Dagsa"
+
+      - name: Create ZIP file
+        run: |
+          zip -r build-artifact.zip ./path/to/your/build/files
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: build-artifact.zip
